@@ -8,6 +8,6 @@
 
 ## 安装
 
-本插件基于油猴开发，所以需要先安装[油猴](https://www.tampermonkey.net/)插件，支持的浏览器：Chrome, Microsoft Edge, Safari, 和 Firefox。
+本插件基于油猴开发，所以需要先安装[油猴](https://www.tampermonkey.net)插件，支持的浏览器：Chrome, Microsoft Edge, Safari, 和 Firefox。
 
-油猴安装完毕后，请点击[此链接](https://greasyfork.org/zh-CN/scripts/540249-%E7%A6%81%E7%94%A8%E7%A9%BA%E6%A0%BC%E7%BF%BB%E9%A1%B5)进入安装。
+油猴安装完毕后，请点击[此链接](https://greasyfork.org/zh-CN/scripts/540253-no-space-scroll)进入安装。
