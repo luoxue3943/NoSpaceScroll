@@ -6,10 +6,10 @@
 // @author       珞雪
 // @match        *://*/*
 // @match        *://*.youtube.com
+// @match        *://*.bilibili.com
 // @exclude      *://*.bilibili.com/video/*
 // @exclude      *://*.bilibili.com/read/*
-// @exclude      *://*.youtube.com/*
-// @exclude      *://youtu.be/*
+// @exclude      *://*.youtube.com/*/*
 // @exclude      *://*.vimeo.com/*
 // @exclude      *://*.iqiyi.com/*
 // @exclude      *://*.youku.com/*
