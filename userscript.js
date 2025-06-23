@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         No Space Scroll
 // @name:zh-CN   禁用空格翻页
-// @version      1.02
+// @version      1.04
 // @description  在页面加载初期即拦截全局的空格键（Space）和 Shift+Space 事件，仅在非输入框、非文本域及非可编辑区域触发时阻止默认的上下翻页行为，确保表单和富文本编辑区中的空格输入功能不受影响。
 // @author       珞雪
 // @match        *://*/*
-// @exclude      *://*.bilibili.com/*
+// @match        *://*.youtube.com
+// @exclude      *://*.bilibili.com/video/*
+// @exclude      *://*.bilibili.com/read/*
 // @exclude      *://*.youtube.com/*
 // @exclude      *://youtu.be/*
 // @exclude      *://*.vimeo.com/*
