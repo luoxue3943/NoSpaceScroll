@@ -5,6 +5,25 @@
 // @description  在页面加载初期即拦截全局的空格键（Space）和 Shift+Space 事件，仅在非输入框、非文本域及非可编辑区域触发时阻止默认的上下翻页行为，确保表单和富文本编辑区中的空格输入功能不受影响。
 // @author       珞雪
 // @match        *://*/*
+// @exclude      *://*.bilibili.com/*
+// @exclude      *://*.youtube.com/*
+// @exclude      *://youtu.be/*
+// @exclude      *://*.vimeo.com/*
+// @exclude      *://*.iqiyi.com/*
+// @exclude      *://*.youku.com/*
+// @exclude      *://*.tudou.com/*
+// @exclude      *://*.pptv.com/*
+// @exclude      *://*.v.qq.com/*
+// @exclude      *://*.mgtv.com/*
+// @exclude      *://*.sohu.com/*
+// @exclude      *://*.acfun.cn/*
+// @exclude      *://*.netflix.com/*
+// @exclude      *://*.primevideo.com/*
+// @exclude      *://*.hulu.com/*
+// @exclude      *://*.dailymotion.com/*
+// @exclude      *://*.twitch.tv/*
+// @noframes
+// @run-at       document-start
 // @license      MIT
 // @grant        none
 // @namespace    https://github.com/luoxue3943/NoSpaceScroll
@@ -18,20 +37,20 @@
 */
 
 (function () {
-  // 判断当前元素是否允许输入空格
   function isEditable(el) {
-    return el.matches('input, textarea, [contenteditable="true"]');
+    return el.matches(
+      'input, textarea, [contenteditable="true"], video, audio'
+    );
   }
 
-  // 核心拦截逻辑
   function killSpace(e) {
-    if (e.code === "Space" && !isEditable(e.target)) {
+    const active = document.activeElement;
+    if (e.code === "Space" && !isEditable(active)) {
       e.preventDefault();
       e.stopImmediatePropagation();
     }
   }
 
-  // 在捕获阶段优先拦截 keydown 和 keypress
   window.addEventListener("keydown", killSpace, { capture: true });
   window.addEventListener("keypress", killSpace, { capture: true });
 })();
