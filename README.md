@@ -2,6 +2,8 @@
 
 Intercepts spacebar scrolling operations on all websites
 
+**English** | [中文](https://github.com/luoxue3943/NoSpaceScroll/blob/master/README_zh.md)
+
 ## Features
 
 Intercepts global Space and Shift+Space key events on the page. It only prevents the default page up/down scrolling behavior when triggered outside of input fields, text areas, and content-editable regions, ensuring that spacebar input in forms and rich-text editors is not affected.
